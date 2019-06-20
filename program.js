@@ -12,17 +12,17 @@ process.stdin.on('readable', function() {
 
 			case '/version': 
 			process.stdout.write('node version: ' + process.version + '\n');
-            process.exit();
-            break;
-            
-            case '/language': 
-            process.stdout.write('language: ' + process.env.LANG + '\n');
-            process.exit();
-        	break;
-        	
-        	default:
-            process.stderr.write('Wrong instruction!');
-            break;
-        }
-    }
+			process.exit();
+			break;
+
+			case '/language': 
+			process.stdout.write('language: ' + process.env.LANG + '\n');
+			process.exit();
+			break;
+
+			default:
+			process.stderr.write('Wrong instruction!');
+			break;
+		}
+	}
 });
